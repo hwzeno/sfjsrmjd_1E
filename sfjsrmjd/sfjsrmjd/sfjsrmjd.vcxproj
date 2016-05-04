@@ -76,7 +76,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1_1.c" />
+    <ClCompile Include="xiti1-10.c" />
+    <ClCompile Include="xiti1-9.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

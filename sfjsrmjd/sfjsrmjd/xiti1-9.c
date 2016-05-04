@@ -1,31 +1,52 @@
 #include<stdio.h>
-#include<string.h>
-//int main()
-//{
-//	if()
-//	{
-//	
-//	}
-//	else if()
-//	{
-//		printf("no");
-//	}
-//	else
-//	{
-//		printf("not a triangle.");
-//	}
-//	return 0;
-//}
-//
-
+#include<math.h>
 int main()
 {
-	int i;
-	char a[11] ="1234567890";
-	strncpy(a, a, 3);
-	for (i = 0; i < 11; i++)
+	int a, b, c, t;
+	scanf("%d%d%d", &a, &b, &c);
+	
+	if((a+b) > c && 
+	   (a+c) > b &&
+	   (b+c) > a &&
+	   abs(a-b) < c &&
+	   abs(a-c) < b &&
+	   abs(b-c) < a
+		)
 	{
-		printf("%c", a[i]);
-	}
+		/*sort*/
+		if(b>a)
+		{
+			t = a;
+			a = b;
+			b = t;
+		}
+		if(c>a)
+		{
+			t = a;
+			a = c;
+			c = t;
+		}
+		if(c>b)
+		{
+			t = b;
+			b = c;
+			c = t;
+		}
+		if(a*a == (b*b + c*c))
+		{
+			printf("yes");
+		}
+		else
+		{
+			printf("no");
+		}
 
+	}
+	else
+	{
+		printf("not a trangle");
+	}
+	return 0;
 }
+
+
